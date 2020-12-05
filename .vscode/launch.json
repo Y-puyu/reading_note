@@ -1,3 +1,7 @@
+//作者：谭九鼎
+//链接：https://www.zhihu.com/question/30315894/answer/154979413
+//来源：知乎
+
 // https://code.visualstudio.com/docs/cpp/launch-json-reference
 {
     "version": "0.2.0",
@@ -13,7 +17,7 @@
         "externalConsole": true, // 使用单独的cmd窗口，与其它IDE一致；为false时使用内置终端
         "internalConsoleOptions": "neverOpen", // 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡，你应该不需要对gdb手动输命令吧？
         "MIMode": "gdb", // 指定连接的调试器，可以为gdb或lldb。但我没试过lldb
-        "miDebuggerPath": "gdb.exe", // 调试器路径，Windows下后缀不能省略，Linux下则不要
+        "miDebuggerPath": "D:\\mingw-w64\\mingw64\\bin\\gdb.exe", // 调试器路径，Windows下后缀不能省略，Linux下则不要
         "setupCommands": [
             { // 模板自带，好像可以更好地显示STL容器的内容，具体作用自行Google
                 "description": "Enable pretty-printing for gdb",
