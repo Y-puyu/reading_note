@@ -72,8 +72,15 @@
 
    - `char` 字符类型、`short` 短整型、`int` 整形、`long` 长整形。
    - 均有两个版本：`signed` 有符号，`unsigned` 无符号。
-   - 各类型变量表示范围![20201214105004](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214105004.png)
-   - 变量范围的限制![20201214105521](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214105521.png)也可见 `demo01.c`，在包含了 `limits.h` 头文件后，就能直接打印各个变量的数值范围。
+   - 各类型变量表示范围
+
+        ![20201214105004](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214105004.png)
+
+   - 变量范围的限制
+
+        ![20201214105521](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214105521.png)
+
+        也可见 `demo01.c`，在包含了 `limits.h` 头文件后，就能直接打印各个变量的数值范围。
    - `char` 类型是用途十分广，但针对不同编译器来讲，若不显示写出 `char` 是否有符号，则编译器会根据自己的来。那么这样就很不方便程序移植，尽量我们使用 `0~127` 之间的 `char` 变量，这是有符号和无符号的交集。
 
 2. 字面值
