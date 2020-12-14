@@ -18,7 +18,9 @@
 
 2. 见 `<float.h>` 中的定义即可。
 
-3. 很实用啊，真正的见名知意。![20201214154034](https://raw.githubusercontent.com/Y-puyu/img/main/images/20201214154034.png?token=AK7TQWTSL2VYS6PEEV2B7MK724LTG)
+3. 很实用啊，真正的见名知意。
+
+    ![![20201214154034](httpsraw.githubusercontent.comY-puyuimgmainimages20201214154034.pngtoken=AK7TQWTSL2VYS6PEEV2B7MK724LTG)](https://raw.githubusercontent.com/Y-puyu/img/main/images/!%5B20201214154034%5D(httpsraw.githubusercontent.comY-puyuimgmainimages20201214154034.pngtoken%3DAK7TQWTSL2VYS6PEEV2B7MK724LTG).png?token=AK7TQWQ3AO3YHOR2R3NHPQS724ZXA)
 
 4. `warning` 警告。只要能放下也无所谓。否则，根据各个编译器自己的规矩来，可能溢出，可能直接丢弃高阶位，这些情况都是有可能的。
 
@@ -135,15 +137,28 @@
 10. 链接属性
 
     - 在多个源文件进行编译的时候，若产生相同变量名。怎么办呢？到底都指的是同一个实体还是不同实体呢？**标识符的链接属性** 专门来处理该问题。标识符的作用域与它的链接属性有关。
-    - 三种链接属性：external（外部）、internal（内部）、none（无）。详情见：![20201214124914](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214124914.png)
-    - 书上这个例子已经很完美了：![20201214125612](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214125612.png)
-    - 至于 `static` 和 `extern` 这两个关键字，都可用于修改标识符的链接属性。详见：![20201214130347](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214130347.png)
+    - 三种链接属性：external（外部）、internal（内部）、none（无）。详情见：!
+
+        ![20201214124914](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214124914.png)
+
+    - 书上这个例子已经很完美了：
+
+        ![20201214125612](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214125612.png)
+
+    - 至于 `static` 和 `extern` 这两个关键字，都可用于修改标识符的链接属性。详见：
+
+        ![20201214130347](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214130347.png)
+
     这个概念大多涉及多文件编译啥的。目前还是用的很少很少。
+
     - `extern` 关键字。在我印象中只有 `extern c`。。。这篇博文讲的蛮不错的：[extern关键字，C语言extern关键字用法详解](http://c.biancheng.net/view/404.html)。
-    程序编译单位是源文件，源文件内包含函数，函数内包含局部变量，而在函数外定义的变量将其称为外部变量也是全局变量。外部变量为静态存储，生存周期为整个程序的生存周期，被所有函数所共用，有效范围为定义位置至本源文件结束。
+
+        程序编译单位是源文件，源文件内包含函数，函数内包含局部变量，而在函数外定义的变量将其称为外部变量也是全局变量。外部变量为静态存储，生存周期为整个程序的生存周期，被所有函数所共用，有效范围为定义位置至本源文件结束。
 
         如果全局变量不在文件的开头定义，有效的作用范围将只限于其定义处到文件结束。如果在定义点之前的函数想引用该全局变量，则应该在引用之前用关键字 `extern` 对该变量作“外部变量声明”，表示该变量是一个已经定义的外部变量。有了此声明，就可以从“声明”处起，合法地使用该外部变量。见 `demo08.c`。
+
     - 如果在变量定义之前要使用该变量，则应在使用之前加 extern 声明变量，使作用域扩展到从声明开始到本文件结束。
+
     - 如果整个工程由多个源文件组成，在一个源文件中想引用另外一个源文件中已经定义的外部变量，同样只需在引用变量的文件中用 `extern` 关键字加以声明即可。见 `demo09.c、demo10.c` 的演示。
 
         对于多个文件的工程，都可以采用上面这种方法来操作。对于模块化的程序文件，可在其文件中预先留好外部变量的接口，也就是只采用 `extern` 声明变量，**而不定义变量**，`demo09.c` 文件中的 `X` 与 `Y` 就是如此操作的。
@@ -176,7 +191,9 @@
     - `auto` 关键字修饰的变量称为 **自动变量**，这个不同于 `C++` 的 `auto` 关键字用法啊。缺省的变量类型可以拿 `auto` 修饰，但它并不具备变量类型推导的功能，只是将该变量类型填充为 `int`。
     - `static` 关键字可以延长局部变量的生命周期，使该变量的存储类型从自动变为静态。但并不改变该变量的作用域。**函数的形参不可以被声明为静态**，因为实参总是在堆栈中传给函数，用于支持递归。可见 `demo12.c`。
     - `register` 关键字大多都是寄存器优化啥的，这个编译器有自己的想法不用太在意。或许真的很注重性能，可以使用该关键字进行修饰变量。
-    - 注意：`register` 修饰的变量不能取地址。可见 `demo13.c`。不管这个 `register` 建议成功与否，均不能取地址。主要原因在于许多机器其实并没有对寄存器地址作定义还有数据恢复啥的，可参考：![20201214135917](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214135917.png)
+    - 注意：`register` 修饰的变量不能取地址。可见 `demo13.c`。不管这个 `register` 建议成功与否，均不能取地址。主要原因在于许多机器其实并没有对寄存器地址作定义还有数据恢复啥的，可参考：
+
+        ![20201214135917](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214135917.png)
 
 12. 初始化
 
@@ -185,13 +202,18 @@
 
 13. `static` 关键字
 
-    - 面试过程中被问到 `n` 次。![20201214140322](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140322.png)
+    - 面试过程中被问到 `n` 次。
+
+        ![20201214140322](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140322.png)
     - `static` 修饰函数或者外部变量的时候，会修改其链接属性。会从 `external` 属性修改为 `internal` 属性。那么就只能在声明他们的源文件中访问了。
     - `static` 修饰局部变量则会将自动变量修改为静态变量，延长变量的声明周期。在整个程序的运行期间该变量将一直存在。
 
 14. 作用域、存储类型示例
-    - 很不错的例子：![20201214140914](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140914.png)![20201214140932](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140932.png)
-    针对变量 `c`，它被 `static` 修饰，链接属性由 `external` 属性修改为 `internal` 属性。使得它只能在该源文件下被访问。可见 `demo14.c、demo15.c`。
+    - 很不错的例子：
+
+        ![20201214140914](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140914.png)![20201214140932](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140932.png)
+
+        针对变量 `c`，它被 `static` 修饰，链接属性由 `external` 属性修改为 `internal` 属性。使得它只能在该源文件下被访问。可见 `demo14.c、demo15.c`。
 
 ### 疑问
 

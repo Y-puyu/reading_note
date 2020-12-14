@@ -50,6 +50,7 @@
 3. "\"Blunder\?\?!??\"" 。见 `demo03.c`
 
 4. 了解即可
+
     ![20201213192326](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201213192326.png)
 
 5. 预处理器将注释替换为一个空格，从而生成结果语句非法的。（涨知识了）
@@ -64,7 +65,9 @@
 
 10. `cc main.c list.c report.c -lparse`。
 
-11. 简单了解。`make` 工具使用和 `makefile` 编写也是基础中的基础了。![20201213193457](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201213193457.png)
+11. 简单了解。`make` 工具使用和 `makefile` 编写也是基础中的基础了。
+
+    ![20201213193457](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201213193457.png)
 
 ### 2.8 编程
 
