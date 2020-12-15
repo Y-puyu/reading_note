@@ -20,7 +20,7 @@
 
 3. 很实用啊，真正的见名知意。
 
-    ![![20201214154034](httpsraw.githubusercontent.comY-puyuimgmainimages20201214154034.pngtoken=AK7TQWTSL2VYS6PEEV2B7MK724LTG)](https://raw.githubusercontent.com/Y-puyu/img/main/images/!%5B20201214154034%5D(httpsraw.githubusercontent.comY-puyuimgmainimages20201214154034.pngtoken%3DAK7TQWTSL2VYS6PEEV2B7MK724LTG).png?token=AK7TQWQ3AO3YHOR2R3NHPQS724ZXA)
+    ![20201215172715](https://raw.githubusercontent.com/Y-puyu/img/main/images/20201215172715.png?token=AK7TQWQ4ZBH4RAIKVJUZHD273CA3G)
 
 4. `warning` 警告。只要能放下也无所谓。否则，根据各个编译器自己的规矩来，可能溢出，可能直接丢弃高阶位，这些情况都是有可能的。
 
