@@ -4,7 +4,7 @@
 
 ## 本章总结及注意点
 
-![20201215172521](https://raw.githubusercontent.com/Y-puyu/img/main/images/20201215172521.png?token=AK7TQWQFRSQORPI2WHUAJB273CAUU)
+![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201217135554.png)
 
 ---
 
