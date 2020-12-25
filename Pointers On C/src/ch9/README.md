@@ -34,7 +34,7 @@
 
     ![4](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201224111808.png)
 
-### 8.8 编程练习
+### 9.14 编程练习
 
 1. 主要使用字符分类函数配合计算器即可。直接复制的答案代码，见 `demo01.c`。
 
