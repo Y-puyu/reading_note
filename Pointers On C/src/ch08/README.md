@@ -2,6 +2,8 @@
 
 ## 本章总结及注意点
 
+![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227191303.png)
+
 ![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201221103650.png)
 
 ![2](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201221103801.png)

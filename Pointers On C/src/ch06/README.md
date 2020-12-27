@@ -1,8 +1,10 @@
-# 第六章：语句
+# 第六章：指针
 
 `C` 语言的精华及难点。
 
 ## 本章总结及注意点
+
+![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227174009.png)
 
 ![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201217205033.png)
 
@@ -30,7 +32,7 @@
 
 6. 两个错误。前置 `++` 导致数组第一个元素并没有被清 0，且最后会越过数组有边界并解引用将该块空间清 0。**还有一个内存连续导致的经典死循环问题，我没有考虑到**...详见参考答案：
 
-    ![3](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201217211320.png)
+    ![3](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227174146.png)
 
 7. 看着头疼...建议直接去刷牛客单选。参考答案：
 

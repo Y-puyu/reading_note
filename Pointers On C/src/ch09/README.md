@@ -4,6 +4,8 @@
 
 ## 本章总结及注意点
 
+![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227191716.png)
+
 ![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201224104351.png)
 
 ![2](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201224104443.png)
@@ -32,7 +34,7 @@
 
 8. 如果 `buffer` 中包含一个有效字符串，那么两个都能找到字符串末尾的 `NUL`，仅是返回值类型不同，前者为有符号类型，而后者为无符号类型。如果不包含一个有效字符串，那么 `memchr()` 函数将返回一个 `NULL` 指针，用其来减去 `buffer` 是没有意义的。而 `strlen` 则一直向后寻找，最终可能程序崩溃，结果也没有意义。
 
-    ![4](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201224111808.png)
+    ![4](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227191912.png)
 
 ### 9.14 编程练习
 

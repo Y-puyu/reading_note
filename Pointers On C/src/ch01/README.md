@@ -1,10 +1,12 @@
 # 第一章：快速上手
 
-有关于 `ch1` 中一开始给的样例程序源码，在 `supporting_src` 文件夹中的 `ch1` 的 `rearrang.c` 文件即是。
+有关于 `ch01` 中一开始给的样例程序源码，在 `supporting_src` 文件夹中的 `ch01` 的 `rearrang.c` 文件即是。
 
 ## 本章总结及注意点
 
-![20201206222831](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201206222831.png)
+![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226212946.png)
+
+![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226211252.png)
 
 ---
 
@@ -20,7 +22,7 @@
 
 3. 见名知意。且规范使用大写命名格式，很容易知道这就是个 `#define` 常量。
 
-4. %d %s %lf，貌似浮点数也可以使用 %g。个人没这样使用过。
+4. `%d %s %lf`，貌似浮点数也可以使用 `%g`。个人没这样使用过。
 
 5. `scanf("%d%d%s", &quantity, &price, department);`
 

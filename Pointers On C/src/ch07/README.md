@@ -4,7 +4,9 @@
 
 ## 本章总结及注意点
 
-![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201220142414.png)
+![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227190744.png)
+
+![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227174606.png)
 
 ![2](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201220142925.png)
 
@@ -38,7 +40,7 @@
 
     ![3](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201220161621.png)
 
-### 6.18 编程练习
+### 7.11 编程练习
 
 1. 简单的递归，见 `demo06.c`。
 

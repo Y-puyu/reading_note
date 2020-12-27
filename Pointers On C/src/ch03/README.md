@@ -4,9 +4,9 @@
 
 ## 本章总结及注意点
 
-![![20201214104145](undefined)](https://raw.githubusercontent.com/Y-puyu/picture/main/images/!%5B20201214104145%5D(undefined).png)
+![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226212733.png)
 
-![20201214104218](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214104218.png)
+![2](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226212605.png)
 
 ---
 
@@ -74,11 +74,11 @@
    - 均有两个版本：`signed` 有符号，`unsigned` 无符号。
    - 各类型变量表示范围
 
-        ![20201214105004](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214105004.png)
+        ![3](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226213147.png)
 
    - 变量范围的限制
 
-        ![20201214105521](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214105521.png)
+        ![4](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226213247.png)
 
         也可见 `demo01.c`，在包含了 `limits.h` 头文件后，就能直接打印各个变量的数值范围。
    - `char` 类型是用途十分广，但针对不同编译器来讲，若不显示写出 `char` 是否有符号，则编译器会根据自己的来。那么这样就很不方便程序移植，尽量我们使用 `0~127` 之间的 `char` 变量，这是有符号和无符号的交集。
@@ -144,17 +144,17 @@
 10. 链接属性
 
     - 在多个源文件进行编译的时候，若产生相同变量名。怎么办呢？到底都指的是同一个实体还是不同实体呢？**标识符的链接属性** 专门来处理该问题。标识符的作用域与它的链接属性有关。
-    - 三种链接属性：external（外部）、internal（内部）、none（无）。详情见：!
+    - 三种链接属性：`external`（外部）、`internal`（内部）、`none`（无）。详情见：!
 
-        ![20201214124914](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214124914.png)
+        ![5](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226213247.png)
 
     - 书上这个例子已经很完美了：
 
-        ![20201214125612](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214125612.png)
+        ![6](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226213522.png)
 
     - 至于 `static` 和 `extern` 这两个关键字，都可用于修改标识符的链接属性。详见：
 
-        ![20201214130347](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214130347.png)
+        ![7](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201226213605.png)
 
     这个概念大多涉及多文件编译啥的。目前还是用的很少很少。
 
@@ -176,21 +176,21 @@
 
         以下引自：[C语言中关键字auto、static、register、const、volatile、extern的作用](https://www.cnblogs.com/myvic/p/8970733.html)
 
-        3.static
+        3.`static`
 
-        3.1 static 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 static 修饰局部变量可以在函数调用之间保持局部变量的值。
+        3.1 `static` 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 `static` 修饰局部变量可以在函数调用之间保持局部变量的值。
 
-        3.2  static 修饰符也可以应用于全局变量。当 static 修饰全局变量时，会使变量的作用域限制在声明它的文件内。
+        3.2  `static` 修饰符也可以应用于全局变量。当 `static` 修饰全局变量时，会使变量的作用域限制在声明它的文件内。
 
-        　　    3.3  static 是全局变量的默认存储类
+        3.3  `static` 是全局变量的默认存储类
 
-        4.extern
+        4.`extern`
 
-        4.1 extern 存储类用于提供一个全局变量的引用，全局变量对所有的程序文件都是可见的。当您使用 'extern' 时，对于无法初始化的变量，会把变量名指向一个之前定义过的存储位置。
+        4.1 `extern` 存储类用于提供一个全局变量的引用，全局变量对所有的程序文件都是可见的。当您使用 `extern` 时，对于无法初始化的变量，会把变量名指向一个之前定义过的存储位置。
 
-        4.2 当您有多个文件且定义了一个可以在其他文件中使用的全局变量或函数时，可以在其他文件中使用 extern 来得到已定义的变量或函数的引用。可以这么理解，extern 是用来在另一个文件中声明一个全局变量或函数。
+        4.2 当您有多个文件且定义了一个可以在其他文件中使用的全局变量或函数时，可以在其他文件中使用 `extern` 来得到已定义的变量或函数的引用。可以这么理解，`extern` 是用来在另一个文件中声明一个全局变量或函数。
 
-        extern 修饰符通常用于当有两个或多个文件共享相同的全局变量或函数的时候
+        `extern` 修饰符通常用于当有两个或多个文件共享相同的全局变量或函数的时候
 
 11. 存储类型
     - C语言中提供了存储说明符 `auto，register，extern，static` 说明的四种存储类别。四种存储类别说明符有两种存储期：自动存储期和静态存储期。其中 `auto` 和 `register` 对应自动存储期。具有自动存储期的变量在进入声明该变量的程序块是被建立，它在该程序块活动时存在，退出该程序块时撤销。
@@ -200,7 +200,7 @@
     - `register` 关键字大多都是寄存器优化啥的，这个编译器有自己的想法不用太在意。或许真的很注重性能，可以使用该关键字进行修饰变量。
     - 注意：`register` 修饰的变量不能取地址。可见 `demo13.c`。不管这个 `register` 建议成功与否，均不能取地址。主要原因在于许多机器其实并没有对寄存器地址作定义还有数据恢复啥的，可参考：
 
-        ![20201214135917](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214135917.png)
+        ![11](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227172053.png)
 
 12. 初始化
 
@@ -211,15 +211,15 @@
 
     - 面试过程中被问到 `n` 次。
 
-        ![20201214140322](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140322.png)
+        ![12](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227172145.png)
     - `static` 修饰函数或者外部变量的时候，会修改其链接属性。会从 `external` 属性修改为 `internal` 属性。那么就只能在声明他们的源文件中访问了。
     - `static` 修饰局部变量则会将自动变量修改为静态变量，延长变量的声明周期。在整个程序的运行期间该变量将一直存在。
 
 14. 作用域、存储类型示例
     - 很不错的例子：
 
-        ![20201214140914](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140914.png)![20201214140932](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201214140932.png)
-
+        ![12](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227172243.png)
+        ![13](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201227172315.png)
         针对变量 `c`，它被 `static` 修饰，链接属性由 `external` 属性修改为 `internal` 属性。使得它只能在该源文件下被访问。可见 `demo14.c、demo15.c`。
 
 ### 疑问
