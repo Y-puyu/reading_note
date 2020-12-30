@@ -1,14 +1,10 @@
-# 第十四章：预处理器
+# 第十五章：输入 / 输出函数
 
 `C` 语言宏用的很多很多，看看 `stdio.h` 等各种头文件或者开源项目中的应用就懂了，各种宏定义，坑点也是蛮多的，需要学习并注意。
 
 ## 本章总结及注意点
 
-![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201229140159.png)
-
-![1](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201229135126.png)
-
-![2](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201229140421.png)
+![0](https://raw.githubusercontent.com/Y-puyu/picture/main/images/20201230230537.png)
 
 ---
 
