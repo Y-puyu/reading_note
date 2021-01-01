@@ -1,6 +1,6 @@
 # Pointers On C
 
-一个简单的读书笔记，会将部分代码练习及总结放上来，记录所遇到的问题，分享解决方案。
+简单的读书笔记，会将部分代码练习及总结放上来，记录所遇到的问题，分享解决方案。
 
 原书作者英文版勘误表：[Errata for Pointers on C](https://www.cs.rit.edu/~kar/pointers.on.c/errata.html)
 
