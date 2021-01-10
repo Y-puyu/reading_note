@@ -5,7 +5,6 @@
 #include "tree.h"
 #include <assert.h>
 #include <stdio.h>
-#include <malloc.h>
 
 /*
 **	The TreeNode structure holds the value and pointers for one
