@@ -1,3 +1,4 @@
 /test_code
 *.exe
 *.out
+*.DS_Store
