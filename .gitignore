@@ -2,3 +2,4 @@
 *.exe
 *.out
 *.DS_Store
+settings.json
